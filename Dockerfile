@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 # Add dependencies
 RUN apt-get update && \
     apt-get install -yq --no-install-recommends git build-essential python-smbus && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+    apt-get clean && rm -rf /var/lib/apt/lists/* \
     pip install RPi.Gpio GPIO    
 
 # Copy requirements.txt first for better cache on later pushes
