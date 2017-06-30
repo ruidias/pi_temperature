@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 RUN apt-get update && \
     apt-get install -yq --no-install-recommends git build-essential python-smbus && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
-    pip install RPi.Gpio w1thermsensor    
+    pip install RPi.Gpio GPIO    
 
 # Copy requirements.txt first for better cache on later pushes
 COPY ./requirements.txt /requirements.txt
